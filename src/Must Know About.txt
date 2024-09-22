@@ -1,0 +1,57 @@
+What is JSX?
+
+JSX is a syntax extension for JavaScript that allows you to write HTML-like structures directly in your JavaScript code. 
+It's compiled into regular JavaScript code at build time. 
+This syntax makes it easier to create and structure UI elements in React applications.
+
+How do you create a React component?
+
+Here's a basic example of creating a React component:
+
+import React from 'react';
+
+function Greeting(props) {
+  return (
+    <div>
+      <h1>Hello, {props.name}!</h1>
+    </div>
+  );
+}
+
+export default Greeting;
+
+In this example:
+
+We import the React library.
+We define a functional component named Greeting that takes a props object as an argument.
+The return statement contains JSX syntax, creating a <div> element with a <h1> element inside.
+The props.name property is used to dynamically insert the name into the greeting.
+The component is exported as the default export, making it available for use in other parts of your application.
+
+What is the purpose of ReactDOM.render()?
+
+ReactDOM.render() is a function used to mount a React component into the DOM. It takes two arguments:
+
+Component: The React component you want to render.
+Container: The DOM element where you want to render the component.
+
+Here's an example of how to use ReactDOM.render():
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Greeting from './Greeting'; // Assuming Greeting is in a separate file
+
+ReactDOM.render(
+  <Greeting name="Alice" />,
+  document.getElementById('root')
+);
+
+In this example:
+
+We import ReactDOM from the react-dom package.
+We create an instance of the Greeting component, passing the name prop as "Alice".
+We call ReactDOM.render() to render the component into the DOM element with the ID "root".
+This will render the Greeting component with the name "Alice" in the element with the ID "root" on your web page.
+
+
+THANK YOU!!!!!
